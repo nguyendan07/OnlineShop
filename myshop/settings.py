@@ -34,12 +34,14 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = 'mypaypalemail@myshop.com'
+PAYPAL_TEST = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
