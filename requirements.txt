@@ -15,7 +15,7 @@ idna==2.6
 kombu==4.1.0
 olefile==0.44
 pdfrw==0.4
-Pillow==8.1.1
+Pillow==9.0.0
 pycparser==2.18
 Pyphen==0.9.4
 pytz==2017.3
